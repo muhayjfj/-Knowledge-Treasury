@@ -1,0 +1,8 @@
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+
+# Sitemap location
+Sitemap: https://knowledge-treasury.com/sitemap.xml

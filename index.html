@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content;">
+  
+  <title>كنز المعرفة | المنصة الأجمل للعلوم الإسلامية</title>
+  
+  <!-- PWA & Mobile Meta Tags -->
+  <link rel="manifest" href="metadata.json">
+  <meta name="theme-color" content="#064e3b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="كنز المعرفة">
+  <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1590076214667-cda43224328b?auto=format&fit=crop&q=80&w=192">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  
+  <style>
+    :root { 
+      --emerald-deep: #022c22;
+      --emerald-primary: #064e3b; 
+      --gold-accent: #d4af37;
+      --pearl: #fdfdfd;
+      --slate-deep: #0f172a;
+    }
+    
+    body { 
+      font-family: 'Cairo', sans-serif; 
+      background-color: #f8fafc;
+      color: var(--slate-deep);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .quran-font { font-family: 'Amiri', serif; }
+
+    .glass-premium {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(25px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 30px 60px -12px rgba(6, 78, 59, 0.08);
+    }
+
+    .bg-islamic {
+      background-image: url('https://www.transparenttextures.com/patterns/islamic-art.png');
+      opacity: 0.03;
+      pointer-events: none;
+    }
+
+    @keyframes gold-pulse {
+      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+      70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+    .premium-pulse { animation: gold-pulse 2s infinite; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { 
+      background: linear-gradient(to bottom, var(--emerald-primary), var(--gold-accent));
+      border-radius: 10px;
+    }
+
+    .shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      transform: rotate(45deg);
+      animation: shimmer-anim 4s infinite;
+    }
+    @keyframes shimmer-anim {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) rotate(45deg); }
+    }
+  </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "@capacitor/cli": "https://esm.sh/@capacitor/cli@^8.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="antialiased">
+  <div class="fixed inset-0 bg-islamic z-0"></div>
+  <div id="root" class="relative z-10"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

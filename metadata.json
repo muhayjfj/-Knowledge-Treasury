@@ -1,0 +1,32 @@
+{
+  "name": "كنز المعرفة | Knowledge Treasury",
+  "short_name": "كنز المعرفة",
+  "description": "منصة إسلامية عالمية للكتب والمحاضرات والعلوم الشرعية.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#022c22",
+  "theme_color": "#064e3b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1590076214667-cda43224328b?auto=format&fit=crop&q=80&w=192",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1590076214667-cda43224328b?auto=format&fit=crop&q=80&w=512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "education",
+    "books",
+    "reference"
+  ],
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
